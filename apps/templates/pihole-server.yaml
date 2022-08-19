@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pihole-server
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: pihole
+    repoURL: https://mojo2600.github.io/pihole-kubernetes/
+    targetRevision: 2.9.1
+    helm:
+      releaseName: pihole-server
+      values: |
+        adlists:
+          - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: adblocker
+  syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
