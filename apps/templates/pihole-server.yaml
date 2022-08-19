@@ -14,6 +14,8 @@ spec:
       values: |
         adlists:
           - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+        ingress:
+          enabled: true
 
   destination:
     server: https://kubernetes.default.svc
