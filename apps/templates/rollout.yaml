@@ -9,4 +9,4 @@ spec:
     unsuccessfulRunHistoryLimit: 10
   selector:
     matchLabels:
-      app: pihole-server
+      app: adblocker
