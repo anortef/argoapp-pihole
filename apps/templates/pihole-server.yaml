@@ -4,7 +4,7 @@ metadata:
   name: pihole-server
   namespace: argocd
   labels:
-    name: pihole-server
+    app: pihole-server
 spec:
   project: default
   source:
