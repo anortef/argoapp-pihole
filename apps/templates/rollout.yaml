@@ -9,4 +9,4 @@ spec:
     unsuccessfulRunHistoryLimit: 10
   selector:
     matchLabels:
-      name: pihole-server
+      app.kubernetes.io/instance: adblocker
