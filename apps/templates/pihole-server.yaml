@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: pihole-server
   namespace: argocd
+  labels:
+    name: pihole-server
 spec:
   project: default
   source:
