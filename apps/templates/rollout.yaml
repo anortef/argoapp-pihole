@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: pihole-rollout
+spec:
+  replicas: 5
+  analysis:
+    successfulRunHistoryLimit: 10
+    unsuccessfulRunHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: pihole-server
