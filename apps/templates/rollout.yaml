@@ -10,3 +10,8 @@ spec:
   selector:
     matchLabels:
       app: pihole-server
+  template:
+    metadata:
+      labels:
+        app: pihole-server
+        release: pihole-server
